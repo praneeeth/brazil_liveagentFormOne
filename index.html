@@ -1007,17 +1007,18 @@
                                 data.attachmentToken = attachmentToken
                                 console.log("Data variable:", data)
                                 window.parent.postMessage(
-                                    {
-                                        event_code: "ym-client-event",
-                                        data: JSON.stringify({
-                                            event: {
-                                                code: "user-data",
-                                                data: {
-                                                    userdetails: data,
-                                                },
-                                            },
-                                        }),
-                    }
+                             JSON.stringify({
+                                    event_code: "ym-client-event",
+                            data: JSON.stringify({
+                                event: {
+                                    code: "user-data",
+                                    data: {
+                                        userdetails: data,
+                                    },
+                                },
+                            }),
+                        }),
+                    
                                     "*"
                                 );
                             })
@@ -1030,17 +1031,17 @@
                         //data.attachmentToken = ""
                         console.log(data)
                         window.parent.postMessage(
-                            {
-                                event_code: "ym-client-event",
-                                data: JSON.stringify({
-                                    event: {
-                                        code: "user-data",
-                                        data: {
-                                            userdetails: data,
-                                        },
+                              JSON.stringify({
+                            event_code: "ym-client-event",
+                            data: JSON.stringify({
+                                event: {
+                                    code: "user-data",
+                                    data: {
+                                        userdetails: data,
                                     },
-                                }),
-        }
+                                },
+                            }),
+                        }),
                             "*"
                         );
                     }
@@ -1053,9 +1054,9 @@
                     data.attachmentToken = ""
                     console.log("In catch", data)
                     window.parent.postMessage(
-                        {
+                        JSON.stringify({
                             event_code: "ym-client-event",
-                            data: ({
+                            data: JSON.stringify({
                                 event: {
                                     code: "user-data",
                                     data: {
@@ -1063,7 +1064,7 @@
                                     },
                                 },
                             }),
-                        }
+                        }),
                         "*"
                     );
                 }
