@@ -1007,7 +1007,7 @@
                                 data.attachmentToken = attachmentToken
                                 console.log("Data variable:", data)
                                 window.parent.postMessage(
-                             JSON.stringify({
+                             {
                                     event_code: "ym-client-event",
                             data: JSON.stringify({
                                 event: {
@@ -1017,7 +1017,7 @@
                                     },
                                 },
                             }),
-                        }),
+                        },
                     
                                     "*"
                                 );
@@ -1031,7 +1031,7 @@
                         //data.attachmentToken = ""
                         console.log(data)
                         window.parent.postMessage(
-                              JSON.stringify({
+                              {
                             event_code: "ym-client-event",
                             data: JSON.stringify({
                                 event: {
@@ -1041,7 +1041,7 @@
                                     },
                                 },
                             }),
-                        }),
+                        },
                             "*"
                         );
                     }
@@ -1054,7 +1054,7 @@
                     data.attachmentToken = ""
                     console.log("In catch", data)
                     window.parent.postMessage(
-                        JSON.stringify({
+                        {
                             event_code: "ym-client-event",
                             data: JSON.stringify({
                                 event: {
@@ -1064,7 +1064,7 @@
                                     },
                                 },
                             }),
-                        }),
+                        },
                         "*"
                     );
                 }
