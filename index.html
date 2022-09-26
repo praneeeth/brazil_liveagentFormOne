@@ -1009,14 +1009,14 @@
                                 window.parent.postMessage(
                              {
                                     event_code: "ym-client-event",
-                            data: JSON.stringify({
+                            data: {
                                 event: {
                                     code: "user-data",
                                     data: {
                                         userdetails: data,
                                     },
                                 },
-                            }),
+                            },
                         },
                     
                                     "*"
@@ -1033,14 +1033,14 @@
                         window.parent.postMessage(
                               {
                             event_code: "ym-client-event",
-                            data: JSON.stringify({
+                            data: {
                                 event: {
                                     code: "user-data",
                                     data: {
                                         userdetails: data,
                                     },
                                 },
-                            }),
+                            },
                         },
                             "*"
                         );
@@ -1056,14 +1056,14 @@
                     window.parent.postMessage(
                         {
                             event_code: "ym-client-event",
-                            data: JSON.stringify({
+                            data: {
                                 event: {
                                     code: "user-data",
                                     data: {
                                         userdetails: data,
                                     },
                                 },
-                            }),
+                            },
                         },
                         "*"
                     );
